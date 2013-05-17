@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sculder</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/javascript" src="js/iscroll-lite.js"></script>
+    <!--<script src="js/iscroll-lite.js"></script>-->
+    <script src="js/app.js"></script>
+    <!--<script>
+        function fun1() {
+            var nextPage = $(e.target.hash);
+            page(nextPage);
+            $("#pages .current").removeClass("current");
+            nextPage.addClass("current");
+
+        }
+    </script>-->
+    <script>
+        $(document).ready(function () {
+            $('#tab-bar a').on('click', function (e) {
+                var nextpage = $(e.target.hash);
+                page(nextpage);
+                $("#pages .current").removeclass("current");
+                nextpage.addclass("current");
+
+            });
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <header>
+        <h1>Sculder</h1>
+    </header>
+    <div id="wrapper">
+
+        <div id="main-content">
+
+            <div id="pages">
+                <div id="map" class="current">
+                    Display Map
+                     <ul>
+        <li>Some Stuff</li>
+        <li>More Stuff</li>
+        <li>Big Stuff</li>
+        <li>Small Stuff</li>
+        <li>1 Stuff</li>
+        <li>2 Stuff</li>
+        <li>Fast Stuff</li>
+        <li>Slow Stuff</li>
+        <li>3 Stuff</li>
+        <li>4 Stuff</li>
+        <li>5 Stuff</li>
+        <li>6 stuff</li>
+        <li>7 stuff<li>
+        <li>8 stuff</li>
+        </ul>   
+                </div>
+                <div id="camera">
+                    <span>Display camera</span>
+                </div>
+                <div id="twitter">
+                    <span>Display Twitter</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <ul id="tab-bar">
+            <li>
+                <a class="bar" href="#map">Map</a>
+            </li>
+            <li>
+                <a class="bar" href="#camera">Camera</a>
+            </li>
+            <li>
+                <a class="bar" href="#twitter">Twitter</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
